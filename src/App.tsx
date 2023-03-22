@@ -25,22 +25,22 @@ export default function App() {
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    !user.firstName
-      ? setErr((prevState) => ({ ...prevState, firstName: true }))
-      : "";
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    !user.lastName
-      ? setErr((prevState) => ({ ...prevState, lastName: true }))
-      : "";
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    !regex.test(user.email)
-      ? setErr((prevState) => ({ ...prevState, email: true }))
-      : "";
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    !user.password
-      ? setErr((prevState) => ({ ...prevState, password: true }))
-      : "";
+    if (!user.firstName) {
+      setErr((prevState) => ({ ...prevState, firstName: true }));
+    }
+
+    if (!user.lastName) {
+      setErr((prevState) => ({ ...prevState, lastName: true }));
+    }
+
+    if (!regex.test(user.email)) {
+      setErr((prevState) => ({ ...prevState, email: true }));
+    }
+
+    if (!user.password) {
+      setErr((prevState) => ({ ...prevState, password: true }));
+    }
+
     if (user.email && user.password && user.firstName && user.lastName) {
       setSubmit(
         `Congratualtion ${
