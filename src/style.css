@@ -39,21 +39,22 @@ h1 {
 }
 
 body {
-  width: 100%;
+  min-width: none;
   min-height: 100vh;
   background-color: var(--Red);
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   font-family: var(--Family);
   color: white;
   background-image: url(./Images/bg-intro-mobile.png);
 }
 .page {
-  width: 100%;
+  min-width: 100%;
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+
   flex-direction: column;
   gap: 2rem;
 }
@@ -93,7 +94,7 @@ body {
   width: 90%;
 
   display: grid;
-  place-items: center;
+  place-content: center;
   gap: 2rem;
 }
 .pageBtn {
@@ -199,13 +200,17 @@ input:focus {
 
 @media (min-width: 800px) {
   body {
-    width: var(--Desktop);
     background-image: url(./Images/bg-intro-desktop.png);
+  }
+  .page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .pageContainer {
     width: 60%;
     max-width: 1100px;
-
     grid-template-columns: 1fr 1fr;
   }
   .introductionContainer {
