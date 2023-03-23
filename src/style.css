@@ -46,6 +46,7 @@ body {
   margin: 0 auto;
   font-family: var(--Family);
   color: white;
+  background-image: url(./Images/bg-intro-mobile.png);
 }
 .page {
   width: 100%;
@@ -197,10 +198,10 @@ input:focus {
 }
 
 @media (min-width: 800px) {
-  /* body {
+  body {
     width: var(--Desktop);
-    background-image: url("./Images/bg-intro-desktop.png");
-  } */
+    background-image: url(./Images/bg-intro-desktop.png);
+  }
   .pageContainer {
     width: 60%;
     max-width: 1100px;
