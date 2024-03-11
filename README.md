@@ -1,6 +1,5 @@
 # Introcomponentwithsign-upform
 Created with StackBlitz ⚡️
-
 This is a React functional component that renders a form for a website that offers a 7-day free trial. The user is required to enter their first name, last name, email address, and password to claim the free trial. The component uses state to keep track of the user input, error messages, and submission status.
 
 The state is managed using the useState hook. The user state object stores the user input for the form fields. The err state object keeps track of the error messages for each field. The submit state variable is used to store the submission status of the form.
